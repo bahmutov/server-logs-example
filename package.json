@@ -1,0 +1,23 @@
+{
+  "name": "server-logs-example",
+  "version": "1.0.0",
+  "description": "API testing using Cypress.io test runner with server-side logs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bahmutov/server-logs-example.git"
+  },
+  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bahmutov/server-logs-example/issues"
+  },
+  "homepage": "https://github.com/bahmutov/server-logs-example#readme",
+  "devDependencies": {
+    "cypress": "3.3.2"
+  }
+}
