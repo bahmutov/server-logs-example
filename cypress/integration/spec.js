@@ -3,10 +3,16 @@
 /// <reference types="Cypress" />
 
 describe('Add API', () => {
-  it('adds 2 todos', function () {
-    cy.get('.new-todo')
-      .type('learn testing{enter}')
-      .type('be cool{enter}')
-    cy.get('.todo-list li').should('have.length', 2)
+  it('adds numbers', function () {
+    cy.api(
+      {
+        url: '/',
+        qs: {
+          a: 2,
+          b: 3
+        }
+      },
+      '2 + 3'
+    )
   })
 })
