@@ -1,4 +1,4 @@
-# server-logs-example
+# server-logs-example [![CircleCI](https://circleci.com/gh/bahmutov/server-logs-example/tree/master.svg?style=svg&circle-token=b3c1a73d533c11e7f1cf3bf9bdcfd98518f929f1)](https://circleci.com/gh/bahmutov/server-logs-example/tree/master)
 > API testing using Cypress.io test runner with server-side logs
 
 ## Server
@@ -20,3 +20,5 @@ Transfer-Encoding: chunked
 
 -9
 ```
+
+![Cypress API test](images/logs.png)
