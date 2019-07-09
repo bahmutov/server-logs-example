@@ -6,9 +6,10 @@
   "private": true,
   "scripts": {
     "test": "cypress run",
-    "start": "node -r @bahmutov/all-logs ./server",
+    "start": "node ./server",
+    "start:logs": "node -r @bahmutov/all-logs ./server",
     "cy:open": "cypress open",
-    "dev": "start-test 7000 cy:open"
+    "dev": "start-test start:logs 7000 cy:open"
   },
   "repository": {
     "type": "git",
