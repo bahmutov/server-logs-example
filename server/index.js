@@ -19,7 +19,7 @@ http
     console.log('%s %s pathname %s', req.method, req.url, pathname)
     // and log the parsed query object in verbose mode
     // visible when NODE_ENV=verbose is set
-    verbose('query', query)
+    verbose('query is %o', query)
 
     const a = parseFloat(query.a)
     const b = parseFloat(query.b)
