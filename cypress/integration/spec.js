@@ -1,6 +1,6 @@
-// enables intelligent code completion for Cypress commands
+// loads definition for the custom "cy.api" command
 // https://on.cypress.io/intelligent-code-completion
-/// <reference types="Cypress" />
+/// <reference types="@bahmutov/cy-api" />
 
 // grab a couple Lodash methods
 const { filter, find } = Cypress._

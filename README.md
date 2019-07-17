@@ -1,5 +1,7 @@
-# server-logs-example [![CircleCI](https://circleci.com/gh/bahmutov/server-logs-example/tree/master.svg?style=svg&circle-token=b3c1a73d533c11e7f1cf3bf9bdcfd98518f929f1)](https://circleci.com/gh/bahmutov/server-logs-example/tree/master)
+# server-logs-example [![renovate-app badge][renovate-badge]][renovate-app] [![CircleCI](https://circleci.com/gh/bahmutov/server-logs-example/tree/master.svg?style=svg&circle-token=b3c1a73d533c11e7f1cf3bf9bdcfd98518f929f1)](https://circleci.com/gh/bahmutov/server-logs-example/tree/master)
 > API testing using Cypress.io test runner with server-side logs
+
+Shows how to use [@bahmutov/cy-api](https://github.com/bahmutov/cy-api) plugin and its custom `cy.api` command to perform end-to-end API testing with full server logs.
 
 ## Server
 
@@ -22,3 +24,6 @@ Transfer-Encoding: chunked
 ```
 
 ![Cypress API test](images/logs.png)
+
+[renovate-badge]: https://img.shields.io/badge/renovate-app-blue.svg
+[renovate-app]: https://renovateapp.com/
