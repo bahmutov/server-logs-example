@@ -53,7 +53,9 @@ describe('Add API', () => {
       expect(debugLog, 'debug log')
         .to.be.an('object')
         .property('message')
-        .to.include('compute')
+        .to.include('2 + 3 = 5')
+
+      // and each message should have a timestamp
     })
   })
 })
