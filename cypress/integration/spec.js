@@ -21,6 +21,7 @@ describe('Add API', () => {
       // 'requestHeaders', 'headers', and 'duration'
 
       // we can check the value returned by the API
+      debugger
       expect(body, 'correct answer').to.equal('5')
 
       // and we can check different log messages
@@ -30,6 +31,7 @@ describe('Add API', () => {
         namespace: 'log'
       })
       console.table(consoleLogs)
+      expect(consoleLogs, '1 console log message').to.have.length(1)
       expect(consoleLogs[0], 'GET log message').to.deep.include({
         type: 'console',
         namespace: 'log',
