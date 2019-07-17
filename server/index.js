@@ -10,6 +10,7 @@ const logs = require('@bahmutov/all-logs/middleware/http')
 http
   .createServer((req, res) => {
     if (logs(req, res) === true) {
+      // the HTTP request was for the server logs
       return
     }
 

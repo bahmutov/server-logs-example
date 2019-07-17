@@ -24,10 +24,15 @@ describe('Add API', () => {
       expect(body, 'correct answer').to.equal('5')
 
       // and we can check different log messages
-      const consoleLogs = filter(messages, { type: 'log' })
+      // first, let's see if the "console.log" includes a message we expect
+      const consoleLogs = filter(messages, {
+        type: 'console',
+        namespace: 'log'
+      })
       console.table(consoleLogs)
-      expect(consoleLogs, 'GET log message').to.deep.include({
-        type: 'log',
+      expect(consoleLogs[0], 'GET log message').to.deep.include({
+        type: 'console',
+        namespace: 'log',
         message: 'GET /?a=2&b=3 pathname /'
       })
 
@@ -38,12 +43,13 @@ describe('Add API', () => {
         .property('message')
         .to.include("{ a: '2', b: '3' }")
 
-      const debugLogs = filter(messages, { type: 'debug' })
+      const debugLogs = filter(messages, {
+        type: 'debug',
+        namespace: 'compute'
+      })
       console.table(debugLogs)
       expect(debugLogs).to.have.length(1)
-      const debugLog = find(debugLogs, m =>
-        /compute 2 \+ 3 = 5/.test(m.message)
-      )
+      const debugLog = find(debugLogs, m => /2 \+ 3 = 5/.test(m.message))
       expect(debugLog, 'debug log')
         .to.be.an('object')
         .property('message')
