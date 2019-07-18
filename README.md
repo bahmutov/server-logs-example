@@ -37,7 +37,7 @@ const { pathname, query } = url.parse(req.url, true)
 // let's just log the basic request parameters
 console.log('%s %s pathname %s', req.method, req.url, pathname)
 // and log the parsed query object in verbose mode
-// visible when NODE_ENV=verbose is set
+// visible when NODE_DEBUG=verbose is set
 verbose('query is %o', query)
 const a = parseFloat(query.a)
 const b = parseFloat(query.b)
