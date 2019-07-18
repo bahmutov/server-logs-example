@@ -79,3 +79,40 @@ it('adds 2 + 3 + 10', () => {
       )
     })
 })
+
+it('adds 2 + 3 + 10 with log check', () => {
+  // we can pass query parameters through url too
+  cy.api(
+    {
+      url: '/?a=2&b=3'
+    },
+    'first sum'
+  )
+    .its('body')
+    .as('first sum') // save result in shared test context
+    .then(function () {
+      cy.api(
+        {
+          url: '/',
+          qs: {
+            a: this['first sum'],
+            b: 10
+          }
+        },
+        'second sum'
+      ).then(({ body, messages }) => {
+        console.log('answer', body)
+        console.table(messages)
+        expect(body, 'result').to.equal('15') // our api returns strings
+        // use the Lodash "find" method to search by properties
+        const computeLogMessage = Cypress._.find(messages, {
+          type: 'debug',
+          namespace: 'compute'
+        })
+        expect(computeLogMessage)
+          .to.be.an('object')
+          .and.have.property('message')
+          .that.includes('compute 5 + 10 = 15')
+      })
+    })
+})
