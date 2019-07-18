@@ -50,3 +50,32 @@ it('adds and subtracts', function () {
     .its('body')
     .should('equal', '-10')
 })
+
+it('adds 2 + 3 + 10', () => {
+  // we can pass query parameters through url too
+  cy.api(
+    {
+      url: '/?a=2&b=3'
+    },
+    'first sum'
+  )
+    .its('body')
+    .as('first sum') // save result in shared test context
+    .then(function () {
+      cy.api(
+        {
+          url: '/',
+          qs: {
+            // because we use "function () {...}"
+            // callback form, "this" refers to the
+            // shared test context where we saved
+            // the first sum using ".as('first sum')" command
+            // https://on.cypress.io/as
+            a: this['first sum'],
+            b: 10
+          }
+        },
+        'second sum'
+      )
+    })
+})
