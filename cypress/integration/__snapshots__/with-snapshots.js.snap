@@ -1,0 +1,23 @@
+exports[`performs expected computations #0`] =
+{
+  "backendMessages": [
+    "2 + 3 = 5"
+  ],
+  "result": "5"
+};
+
+exports[`performs expected computations #1`] =
+{
+  "backendMessages": [
+    "-1 + 30 = 29"
+  ],
+  "result": "29"
+};
+
+exports[`performs expected computations #2`] =
+{
+  "backendMessages": [
+    "1 + 2 = 3"
+  ],
+  "result": "3"
+};

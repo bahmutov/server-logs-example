@@ -25,6 +25,7 @@
   "devDependencies": {
     "@bahmutov/cy-api": "1.2.0",
     "cypress": "3.4.0",
+    "cypress-plugin-snapshots": "1.2.6",
     "start-server-and-test": "1.9.1"
   },
   "dependencies": {

@@ -81,6 +81,8 @@ it('adds numbers', function () {
 })
 ```
 
+See more spec files in [cypress/integration](cypress/integration) folder.
+
 ## See
 
 - Read ["Capture all the logs"](https://glebbahmutov.com/blog/capture-all-the-logs/)

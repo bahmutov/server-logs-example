@@ -80,7 +80,7 @@ it('adds 2 + 3 + 10', () => {
     })
 })
 
-it.only('adds 2 + 3 + 10 with log check', () => {
+it('adds 2 + 3 + 10 with log check', () => {
   // we can pass query parameters through url too
   cy.api(
     {
