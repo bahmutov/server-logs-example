@@ -40,3 +40,19 @@ it('performs expected computations', () => {
     .then(pickImportantMessages)
     .toMatchSnapshot()
 })
+
+it('computes all given examples', () => {
+  const list = []
+  const addToList = list.push.bind(list)
+  ;[
+    // all examples to compute
+    '/?a=2&b=3',
+    '/?a=30&b=-1',
+    '/?a=+1&b=+2'
+  ].forEach(url => {
+    cy.api({ url })
+      .then(pickImportantMessages)
+      .then(addToList)
+  })
+  cy.wrap(list).toMatchSnapshot()
+})

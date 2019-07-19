@@ -21,3 +21,25 @@ exports[`performs expected computations #2`] =
   ],
   "result": "3"
 };
+
+exports[`computes all given examples #0`] =
+[
+  {
+    "backendMessages": [
+      "2 + 3 = 5"
+    ],
+    "result": "5"
+  },
+  {
+    "backendMessages": [
+      "30 + -1 = 29"
+    ],
+    "result": "29"
+  },
+  {
+    "backendMessages": [
+      "1 + 2 = 3"
+    ],
+    "result": "3"
+  }
+];
