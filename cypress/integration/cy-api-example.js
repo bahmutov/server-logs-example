@@ -80,7 +80,7 @@ it('adds 2 + 3 + 10', () => {
     })
 })
 
-it('adds 2 + 3 + 10 with log check', () => {
+it.only('adds 2 + 3 + 10 with log check', () => {
   // we can pass query parameters through url too
   cy.api(
     {
@@ -111,8 +111,7 @@ it('adds 2 + 3 + 10 with log check', () => {
         })
         expect(computeLogMessage)
           .to.be.an('object')
-          .and.have.property('message')
-          .that.includes('compute 5 + 10 = 15')
+          .and.have.property('message', '5 + 10 = 15')
       })
     })
 })
