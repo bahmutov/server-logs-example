@@ -3,6 +3,8 @@
 
 Shows how to use [@bahmutov/cy-api](https://github.com/bahmutov/cy-api) plugin and its custom `cy.api` command to perform end-to-end API testing with full server logs. See [cypress/integration/spec.js](cypress/integration/spec.js) file.
 
+Read ["Black box API testing with server logs"](https://glebbahmutov.com/blog/api-testing-with-sever-logs/) post.
+
 ## Server
 
 Server in [server/index.js](server/index.js) adds numbers passed as query parameters.
