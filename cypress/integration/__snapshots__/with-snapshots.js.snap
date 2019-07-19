@@ -9,7 +9,7 @@ exports[`performs expected computations #0`] =
 exports[`performs expected computations #1`] =
 {
   "backendMessages": [
-    "-1 + 30 = 29"
+    "30 + -1 = 29"
   ],
   "result": "29"
 };

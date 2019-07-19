@@ -24,9 +24,9 @@ it('performs expected computations', () => {
 
   cy.api(
     {
-      url: '/?a=-1&b=30'
+      url: '/?a=30&b=-1'
     },
-    '-1 + 30'
+    '30 - 1'
   )
     .then(pickImportantMessages)
     .toMatchSnapshot()
