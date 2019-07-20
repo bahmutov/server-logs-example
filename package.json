@@ -29,7 +29,7 @@
     "start-server-and-test": "1.9.1"
   },
   "dependencies": {
-    "@bahmutov/all-logs": "1.5.2",
+    "@bahmutov/all-logs": "1.7.1",
     "debug": "4.1.1"
   }
 }
