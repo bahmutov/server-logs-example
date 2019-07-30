@@ -12,6 +12,19 @@ it('adds 2 + 3 (cy.api)', function () {
     .should('equal', '5')
 })
 
+it('adds 2 + 3 and has logs', function () {
+  cy.api({
+    url: '/',
+    qs: {
+      a: 2,
+      b: 3
+    }
+  }).then(({ body, messages }) => {
+    expect(body).to.equal('5')
+    console.table(messages)
+  })
+})
+
 it('adds and subtracts', function () {
   cy.api(
     {
