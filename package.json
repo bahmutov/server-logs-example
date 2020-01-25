@@ -26,7 +26,7 @@
     "@bahmutov/cy-api": "1.4.1",
     "cypress": "3.8.2",
     "cypress-plugin-snapshots": "1.2.9",
-    "start-server-and-test": "1.10.6"
+    "start-server-and-test": "1.10.7"
   },
   "dependencies": {
     "@bahmutov/all-logs": "1.8.1",
