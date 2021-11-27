@@ -30,6 +30,6 @@
   },
   "dependencies": {
     "@bahmutov/all-logs": "1.8.1",
-    "debug": "4.3.2"
+    "debug": "4.3.3"
   }
 }
