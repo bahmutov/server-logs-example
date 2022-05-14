@@ -24,7 +24,7 @@
   "homepage": "https://github.com/bahmutov/server-logs-example#readme",
   "devDependencies": {
     "@bahmutov/cy-api": "1.6.2",
-    "cypress": "3.8.3",
+    "cypress": "9.6.1",
     "cypress-plugin-snapshots": "1.4.4",
     "start-server-and-test": "1.14.0"
   },
